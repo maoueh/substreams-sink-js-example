@@ -48,14 +48,14 @@ const main = async () => {
             outputModule: MODULE,
             productionMode: false,
             startBlockNum: 100000,
-            stopBlockNum: 100100,
+            stopBlockNum: "+100",
             startCursor: cursor,
         });
 
         if (cursor !== undefined) {
-            console.log(`Resuming from cursor ${cursor}, waiting 3s`)
+            console.log(`Resuming from cursor ${cursor}, waiting 1.5s`)
             console.log()
-            await sleep(3000)
+            await sleep(1500)
         }
 
         let blockCount = 0
